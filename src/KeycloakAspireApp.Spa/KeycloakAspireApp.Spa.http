@@ -1,0 +1,6 @@
+@KeycloakAspireApp.Spa_HostAddress = http://localhost:5053
+
+GET {{KeycloakAspireApp.Spa_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
