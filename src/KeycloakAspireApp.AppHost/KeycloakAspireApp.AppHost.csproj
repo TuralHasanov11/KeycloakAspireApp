@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -12,14 +12,14 @@
   <ItemGroup>
     <ProjectReference Include="..\KeycloakAspireApp.ApiService\KeycloakAspireApp.ApiService.csproj" />
     <ProjectReference Include="..\KeycloakAspireApp.Spa\KeycloakAspireApp.Spa.csproj" />
+    <ProjectReference Include="..\MailDev.Hosting\MailDev.Hosting.csproj" IsAspireProjectResource="false" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="8.1.0" />
+    <PackageReference Include="Aspire.Hosting.Azure.Storage" Version="8.1.0" />
     <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="8.1.0" />
-    <PackageReference Include="Aspire.StackExchange.Redis" Version="8.1.0" />
-    <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="8.1.0" />
-    <PackageReference Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.1.0" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="8.1.0" />
   </ItemGroup>
 
 </Project>

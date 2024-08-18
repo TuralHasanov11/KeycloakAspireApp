@@ -7,6 +7,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 
+builder.Services.AddRequestTimeouts();
+builder.Services.AddOutputCache();
+
 var app = builder.Build();
 
 
@@ -17,6 +20,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRequestTimeouts();
+app.UseOutputCache();
 
 app.MapGet("/weatherforecast", async (IHttpClientFactory httpClientFactory) =>
 {
